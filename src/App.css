@@ -1,0 +1,24 @@
+/* Ensure the root element and body take full height */
+html, body, #root {
+  height: 100%;  /* Make sure the root element and body take full height */
+  margin: 0;  /* Remove any default margin */
+}
+
+/* App Component Style */
+.App {
+  height: 100%;  /* Make the app take up full height of the screen */
+  display: flex;
+  flex-direction: column;  /* Stack header, content, and footer */
+}
+
+/* Main content wrapper takes up remaining space */
+.App > main {
+  flex-grow: 1;  /* Content area will take up the remaining space */
+}
+
+/* Optional: Remove the padding and max-width from #root */
+#root {
+  height: 100%;  /* Fill the full height */
+  margin: 0;  /* Remove margin */
+  padding: 0;  /* Remove padding */
+}
