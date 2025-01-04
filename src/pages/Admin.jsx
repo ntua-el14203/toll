@@ -34,7 +34,7 @@ const Dashboard = () => {
       }
 
       // Make the API call with the stored token
-      const response = await axios.get('http://localhost:9115/api/admin/healthcheck', {
+      const response = await axios.get('https://softeng24-26-446700.ue.r.appspot.com/api/admin/healthcheck', {
         headers: {
           'X-OBSERVATORY-AUTH': token, // Use the dynamically retrieved token
         },
@@ -92,7 +92,7 @@ const Dashboard = () => {
 
       // Make the API call with the stored token
       const response = await axios.post(
-        'http://localhost:9115/api/admin/resetstations',
+        'https://softeng24-26-446700.ue.r.appspot.com/api/admin/resetstations',
         {}, // Send an empty object as the POST body
         {
           headers: {
@@ -146,7 +146,7 @@ const Dashboard = () => {
 
       // Make the API call with the stored token
       const response = await axios.post(
-        'http://localhost:9115/api/admin/resetpasses',
+        'https://softeng24-26-446700.ue.r.appspot.com/api/admin/resetpasses',
         {}, // Send an empty object as the POST body
         {
           headers: {
@@ -204,7 +204,7 @@ const Dashboard = () => {
       formData.append('file', passFile);
 
       const response = await axios.post(
-        'http://localhost:9115/api/admin/addpasses',
+        'https://softeng24-26-446700.ue.r.appspot.com/api/admin/addpasses',
         formData,
         {
           headers: {

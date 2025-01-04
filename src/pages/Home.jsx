@@ -27,7 +27,7 @@ const HomePage = ({ isLoggedIn, login }) => {
   const fetchOperatorByUsername = async (username) => {
     try {
       const token = sessionStorage.getItem('authToken');
-      const response = await axios.get(`http://localhost:9115/api/operatorID/${username}`, {
+      const response = await axios.get(`https://softeng24-26-446700.ue.r.appspot.com/api/operatorID/${username}`, {
         headers: {
           'X-OBSERVATORY-AUTH': token,
         },
@@ -54,7 +54,7 @@ const HomePage = ({ isLoggedIn, login }) => {
 
     try {
       const response = await axios.post(
-        'http://localhost:9115/api/login',
+        'https://softeng24-26-446700.ue.r.appspot.com/api/login',
         new URLSearchParams(loginData),
         {
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

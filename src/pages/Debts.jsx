@@ -52,7 +52,7 @@ const DebtsPage = () => {
         throw new Error('No authentication token found. Please log in.');
       }
 
-      const apiUrl = `http://localhost:9115/api/owedBy/${operator}/${formattedDateFrom}/${formattedDateTo}`;
+      const apiUrl = `https://softeng24-26-446700.ue.r.appspot.com/api/owedBy/${operator}/${formattedDateFrom}/${formattedDateTo}`;
 
       const response = await axios.get(apiUrl, {
         headers: {
@@ -101,7 +101,7 @@ const DebtsPage = () => {
         throw new Error('No authentication token found. Please log in.');
       }
 
-      const apiUrl = `http://localhost:9115/api/settleDebts/${operator}/${tollOperatorID}/${formattedDateFrom}/${formattedDateTo}`;
+      const apiUrl = `https://softeng24-26-446700.ue.r.appspot.com/api/settleDebts/${operator}/${tollOperatorID}/${formattedDateFrom}/${formattedDateTo}`;
 
       const response = await axios.post(apiUrl, {}, {
         headers: {
